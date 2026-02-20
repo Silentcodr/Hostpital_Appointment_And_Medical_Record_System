@@ -10,4 +10,11 @@ import com.hospital.record.system.entity.Appointment;
 public interface AppointmentRepository extends JpaRepository<Appointment, Integer> 
 {
 	List<Appointment> findAppointmentByDate(LocalDateTime date);
+	
+	List<Appointment> findAppointmentByDoctor(Integer doctorId);
+	
+	List<Appointment> findAppointmentByPatient(Integer patientId);
+	
+	List<Appointment> findAppointmentByStatus(String status);
+	
 }

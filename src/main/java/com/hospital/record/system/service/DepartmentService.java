@@ -51,7 +51,7 @@ public class DepartmentService
 		return new ResponseEntity<ResponseStructure<List<Department>>>(response,HttpStatus.OK);
 	}
 	
-	@GetMapping
+	@GetMapping("/{id}")
 	public ResponseEntity<ResponseStructure<Department>> fetchDepartmentById(@PathVariable Integer id)
 	{
 		ResponseStructure<Department> response = new ResponseStructure<Department>();
